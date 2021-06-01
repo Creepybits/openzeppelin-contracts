@@ -39,6 +39,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 
     string private _name;
     string private _symbol;
+    
 
     /**
      * @dev Sets the values for {name} and {symbol}.
@@ -52,6 +53,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     constructor (string memory name_, string memory symbol_) {
         _name = name_;
         _symbol = symbol_;
+        
     }
 
     /**
@@ -83,7 +85,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public view virtual override returns (uint8) {
-        return 18;
+        return 2;
     }
 
     /**
